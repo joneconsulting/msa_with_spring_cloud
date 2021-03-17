@@ -1,0 +1,126 @@
+2021-02-21  1:32:17 0 [Note] InnoDB: Uses event mutexes
+2021-02-21  1:32:17 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2021-02-21  1:32:17 0 [Note] InnoDB: Number of pools: 1
+2021-02-21  1:32:17 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2021-02-21  1:32:17 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+2021-02-21  1:32:17 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-02-21  1:32:17 0 [Note] InnoDB: 128 rollback segments are active.
+2021-02-21  1:32:17 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-02-21  1:32:17 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-02-21  1:32:17 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2021-02-21  1:32:17 0 [Note] InnoDB: 10.5.8 started; log sequence number 45118; transaction id 20
+2021-02-21  1:32:17 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/var/mysql/ib_buffer_pool
+2021-02-21  1:32:17 0 [Note] Plugin 'FEEDBACK' is disabled.
+2021-02-21  1:32:17 0 [Note] InnoDB: Buffer pool(s) load completed at 210221  1:32:17
+2021-02-21  1:32:17 0 [Note] Server socket created on IP: '::'.
+2021-02-21  1:32:17 0 [Note] Reading of all Master_info entries succeeded
+2021-02-21  1:32:17 0 [Note] Added new Master_info '' to hash table
+2021-02-21  1:32:17 0 [Note] /usr/local/Cellar/mariadb/10.5.8/bin/mariadbd: ready for connections.
+Version: '10.5.8-MariaDB'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2021-02-21  1:32:41 4 [Warning] Access denied for user 'root'@'localhost'
+2021-02-21  1:34:19 6 [Warning] Access denied for user 'root'@'localhost'
+2021-02-21  1:34:26 7 [Warning] Access denied for user 'root'@'localhost'
+2021-02-21  1:34:31 8 [Warning] Access denied for user 'root'@'localhost'
+2021-02-21  1:45:09 11 [Warning] Access denied for user 'root'@'localhost'
+2021-02-21  3:03:25 16 [Warning] Aborted connection 16 to db: 'mydb' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-02-21  3:03:25 14 [Warning] Aborted connection 14 to db: 'unconnected' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2021-02-21 18:07:08 50 [Warning] Aborted connection 50 to db: 'mydb' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2021-02-21 18:08:19 37 [Warning] Aborted connection 37 to db: 'mydb' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2021-02-22 15:04:32 63 [Warning] Aborted connection 63 to db: 'mydb' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2021-02-22 15:04:33 52 [Warning] Aborted connection 52 to db: 'mydb' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2021-02-22 23:44:00 0 [Note] mariadbd: Aria engine: starting recovery
+recovered pages: 0% 100% (0.0 seconds); tables to flush: 1 0
+ (0.0 seconds); 
+2021-02-22 23:44:00 0 [Note] mariadbd: Aria engine: recovery done
+2021-02-22 23:44:00 0 [Note] InnoDB: Uses event mutexes
+2021-02-22 23:44:00 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2021-02-22 23:44:00 0 [Note] InnoDB: Number of pools: 1
+2021-02-22 23:44:00 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2021-02-22 23:44:00 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+2021-02-22 23:44:00 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-02-22 23:44:00 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=45118,45118
+2021-02-22 23:44:00 0 [Note] InnoDB: Ignoring data file './mydb/users.ibd' with space ID 7, since the redo log references ./mydb/users.ibd with space ID 5.
+2021-02-22 23:44:00 0 [Note] InnoDB: Ignoring data file './mydb/my_topic_orders.ibd' with space ID 14, since the redo log references ./mydb/my_topic_orders.ibd with space ID 10.
+2021-02-22 23:44:00 0 [Note] InnoDB: Ignoring data file './mydb/my_topic_orders.ibd' with space ID 14, since the redo log references ./mydb/my_topic_orders.ibd with space ID 11.
+2021-02-22 23:44:00 0 [Note] InnoDB: Ignoring data file './mydb/my_topic_orders.ibd' with space ID 14, since the redo log references ./mydb/my_topic_orders.ibd with space ID 12.
+2021-02-22 23:44:00 0 [Note] InnoDB: Ignoring data file './mydb/my_topic_orders.ibd' with space ID 14, since the redo log references ./mydb/my_topic_orders.ibd with space ID 13.
+2021-02-22 23:44:00 0 [Note] InnoDB: Starting final batch to recover 20 pages from redo log.
+2021-02-22 23:44:00 0 [Note] InnoDB: 128 rollback segments are active.
+2021-02-22 23:44:00 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-02-22 23:44:00 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-02-22 23:44:00 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-02-22 23:44:00 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2021-02-22 23:44:00 0 [Note] InnoDB: 10.5.8 started; log sequence number 122643; transaction id 264
+2021-02-22 23:44:00 0 [Note] Plugin 'FEEDBACK' is disabled.
+2021-02-22 23:44:00 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/var/mysql/ib_buffer_pool
+2021-02-22 23:44:00 0 [Note] InnoDB: Buffer pool(s) load completed at 210222 23:44:00
+2021-02-22 23:44:00 0 [Note] Server socket created on IP: '::'.
+2021-02-22 23:44:00 0 [Note] Reading of all Master_info entries succeeded
+2021-02-22 23:44:00 0 [Note] Added new Master_info '' to hash table
+2021-02-22 23:44:00 0 [Note] /usr/local/Cellar/mariadb/10.5.8/bin/mariadbd: ready for connections.
+Version: '10.5.8-MariaDB'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2021-02-23  1:24:32 57 [Warning] Access denied for user 'rrot'@'localhost' (using password: YES)
+2021-02-23 14:37:19 79 [Warning] Aborted connection 79 to db: 'mydb' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2021-02-23 14:37:26 58 [Warning] Aborted connection 58 to db: 'mydb' user: 'root' host: 'localhost' (Got timeout reading communication packets)
+2021-02-24  1:19:34 0 [Note] InnoDB: Uses event mutexes
+2021-02-24  1:19:34 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2021-02-24  1:19:34 0 [Note] InnoDB: Number of pools: 1
+2021-02-24  1:19:34 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2021-02-24  1:19:34 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+2021-02-24  1:19:34 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-02-24  1:19:34 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=45118,45118
+2021-02-24  1:19:34 0 [Note] InnoDB: Ignoring data file './mydb/orders.ibd' with space ID 18, since the redo log references ./mydb/orders.ibd with space ID 16.
+2021-02-24  1:19:34 0 [Note] InnoDB: Starting final batch to recover 20 pages from redo log.
+2021-02-24  1:19:34 0 [Note] InnoDB: 128 rollback segments are active.
+2021-02-24  1:19:34 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-02-24  1:19:34 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-02-24  1:19:34 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-02-24  1:19:34 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2021-02-24  1:19:34 0 [Note] InnoDB: 10.5.8 started; log sequence number 142380; transaction id 339
+2021-02-24  1:19:34 0 [Note] Plugin 'FEEDBACK' is disabled.
+2021-02-24  1:19:34 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/var/mysql/ib_buffer_pool
+2021-02-24  1:19:34 0 [Note] InnoDB: Buffer pool(s) load completed at 210224  1:19:34
+2021-02-24  1:19:34 0 [Note] Server socket created on IP: '::'.
+2021-02-24  1:19:34 0 [ERROR] Can't start server: Bind on TCP/IP port. Got error: 48: Address already in use
+2021-02-24  1:19:34 0 [ERROR] Do you already have another mysqld server running on port: 3306 ?
+2021-02-24  1:19:34 0 [ERROR] Aborting
+2021-03-08 23:25:30 0 [Note] InnoDB: Uses event mutexes
+2021-03-08 23:25:30 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2021-03-08 23:25:30 0 [Note] InnoDB: Number of pools: 1
+2021-03-08 23:25:30 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2021-03-08 23:25:30 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+2021-03-08 23:25:30 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-03-08 23:25:30 0 [Note] InnoDB: 128 rollback segments are active.
+2021-03-08 23:25:30 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-03-08 23:25:30 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-03-08 23:25:30 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2021-03-08 23:25:30 0 [Note] InnoDB: 10.5.8 started; log sequence number 142648; transaction id 339
+2021-03-08 23:25:30 0 [Note] Plugin 'FEEDBACK' is disabled.
+2021-03-08 23:25:30 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/var/mysql/ib_buffer_pool
+2021-03-08 23:25:30 0 [Note] InnoDB: Buffer pool(s) load completed at 210308 23:25:30
+2021-03-08 23:25:30 0 [Note] Server socket created on IP: '::'.
+2021-03-08 23:25:30 0 [Note] Reading of all Master_info entries succeeded
+2021-03-08 23:25:30 0 [Note] Added new Master_info '' to hash table
+2021-03-08 23:25:30 0 [Note] /usr/local/Cellar/mariadb/10.5.8/bin/mariadbd: ready for connections.
+Version: '10.5.8-MariaDB'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2021-03-08 23:31:49 0 [Note] InnoDB: Uses event mutexes
+2021-03-08 23:31:49 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2021-03-08 23:31:49 0 [Note] InnoDB: Number of pools: 1
+2021-03-08 23:31:49 0 [Note] InnoDB: Using crc32 + pclmulqdq instructions
+2021-03-08 23:31:49 0 [Note] InnoDB: Initializing buffer pool, total size = 134217728, chunk size = 134217728
+2021-03-08 23:31:49 0 [Note] InnoDB: Completed initialization of buffer pool
+2021-03-08 23:31:49 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=142648,142648
+2021-03-08 23:31:49 0 [Note] InnoDB: 128 rollback segments are active.
+2021-03-08 23:31:49 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2021-03-08 23:31:49 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2021-03-08 23:31:49 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2021-03-08 23:31:49 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2021-03-08 23:31:49 0 [Note] InnoDB: 10.5.8 started; log sequence number 142660; transaction id 339
+2021-03-08 23:31:49 0 [Note] Plugin 'FEEDBACK' is disabled.
+2021-03-08 23:31:49 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/var/mysql/ib_buffer_pool
+2021-03-08 23:31:49 0 [Note] InnoDB: Buffer pool(s) load completed at 210308 23:31:49
+2021-03-08 23:31:49 0 [Note] Server socket created on IP: '::'.
+2021-03-08 23:31:49 0 [Note] Reading of all Master_info entries succeeded
+2021-03-08 23:31:49 0 [Note] Added new Master_info '' to hash table
+2021-03-08 23:31:49 0 [Note] /usr/local/Cellar/mariadb/10.5.8/bin/mariadbd: ready for connections.
+Version: '10.5.8-MariaDB'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
