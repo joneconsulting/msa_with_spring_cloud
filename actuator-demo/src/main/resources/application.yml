@@ -1,0 +1,12 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: demo-app
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics

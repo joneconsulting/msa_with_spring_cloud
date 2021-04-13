@@ -95,12 +95,12 @@ public class UserServiceImpl implements UserService {
 
 //        List<ResponseOrder> orders = new ArrayList<>();
         /* Using as rest template */
-//        String orderUrl = String.format(env.getProperty("order_service.url"), userId);
-//        ResponseEntity<List<ResponseOrder>> orderListResponse =
-//                restTemplate.exchange(orderUrl, HttpMethod.GET, null,
-//                                            new ParameterizedTypeReference<List<ResponseOrder>>() {
-//                });
-//        List<ResponseOrder> ordersList = orderListResponse.getBody();
+        String orderUrl = String.format(env.getProperty("order_service.url"), userId);
+        ResponseEntity<List<ResponseOrder>> orderListResponse =
+                restTemplate.exchange(orderUrl, HttpMethod.GET, null,
+                                            new ParameterizedTypeReference<List<ResponseOrder>>() {
+                });
+        List<ResponseOrder> ordersList = orderListResponse.getBody();
 
         /* Using a feign client */
         /* Feign exception handling */
@@ -113,11 +113,11 @@ public class UserServiceImpl implements UserService {
 
         /* ErrorDecoder */
 //        List<ResponseOrder> ordersList = orderServiceClient.getOrders(userId);
-        log.info("Before call orders microservice");
-        CircuitBreaker circuitBreaker = circuitBreakerFactory.create("circuitbreaker");
-        List<ResponseOrder> ordersList = circuitBreaker.run(() -> orderServiceClient.getOrders(userId),
-                throwable -> new ArrayList<>());
-        log.info("After called orders microservice");
+//        log.info("Before call orders microservice");
+//        CircuitBreaker circuitBreaker = circuitBreakerFactory.create("circuitbreaker");
+//        List<ResponseOrder> ordersList = circuitBreaker.run(() -> orderServiceClient.getOrders(userId),
+//                throwable -> new ArrayList<>());
+//        log.info("After called orders microservice");
 
         userDto.setOrders(ordersList);
 

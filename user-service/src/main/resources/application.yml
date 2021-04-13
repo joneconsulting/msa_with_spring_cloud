@@ -4,12 +4,12 @@ server:
 spring:
   application:
     name: user-service
-  zipkin:
-    base-url: http://127.0.0.1:9411
-    enabled: true
-  sleuth:
-    sampler:
-      probability: 1.0
+#  zipkin:
+#    base-url: http://127.0.0.1:9411
+#    enabled: true
+#  sleuth:
+#    sampler:
+#      probability: 1.0
 
   rabbitmq:
     host: 127.0.0.1
