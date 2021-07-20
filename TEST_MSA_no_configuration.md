@@ -1,3 +1,4 @@
+### Service 기동
 1. eurkea server 
 2. apigateway 
     - spring cloud bus 비활성 
@@ -12,7 +13,7 @@
 4. order-service
 5. catalog-service
 
-** TEST
+### API TEST
 1. 회원가입
 ```
     POST http://ip_address:8000/user-service/users
