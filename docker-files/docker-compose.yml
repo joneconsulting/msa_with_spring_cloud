@@ -149,4 +149,5 @@ services:
 
 networks: 
   my-network:
+    external: true
     name: ecommerce-network
