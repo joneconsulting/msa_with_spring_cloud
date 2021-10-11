@@ -14,13 +14,14 @@ spring:
   cloud:
     config:
       server:
-        native:
-          search-locations: file://${user.home}/Desktop/Work/native-file-repo
         git:
 #          uri: file:///Users/dowonlee/Desktop/Work/git-local-repo
           uri: https://github.com/joneconsulting/spring-cloud-config
+#          basedir: /Users/dowonlee/Desktop/Work/tmp/config-repo
 #          username: [username]
 #          password: [password]
+        native:
+          search-locations: file:///Users/dowonlee/Desktop/Work/native-file-repo
 
 management:
   endpoints:

@@ -1,5 +1,7 @@
 server:
   port: 0
+#  port: ${random.int(50000,50001)}
+#  address: 127.0.0.1
 
 spring:
   application:
@@ -26,16 +28,18 @@ spring:
 #    driver-class-name: org.h2.Driver
 #    url: jdbc:h2:mem:testdb
 #    username: sa
-#    password: 1234
+#    password: 12345
 
 eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+#    prefer-ip-address: true
+#    ip-address: ${server.address}
   client:
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
 
 greeting:
   message: Welcome to the Simple E-commerce.

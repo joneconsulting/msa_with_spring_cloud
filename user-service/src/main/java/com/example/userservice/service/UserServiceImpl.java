@@ -22,6 +22,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
@@ -46,7 +47,7 @@ public class UserServiceImpl implements UserService {
         UserEntity userEntity = userRepository.findByEmail(username);
 
         if (userEntity == null)
-            throw new UsernameNotFoundException(username);
+            throw new UsernameNotFoundException(username + ": not found");
 
         return new User(userEntity.getEmail(), userEntity.getEncryptedPwd(),
                 true, true, true, true,
@@ -95,12 +96,12 @@ public class UserServiceImpl implements UserService {
 
 //        List<ResponseOrder> orders = new ArrayList<>();
         /* Using as rest template */
-        String orderUrl = String.format(env.getProperty("order_service.url"), userId);
-        ResponseEntity<List<ResponseOrder>> orderListResponse =
-                restTemplate.exchange(orderUrl, HttpMethod.GET, null,
-                                            new ParameterizedTypeReference<List<ResponseOrder>>() {
-                });
-        List<ResponseOrder> ordersList = orderListResponse.getBody();
+//        String orderUrl = String.format(env.getProperty("order_service.url"), userId);
+//        ResponseEntity<List<ResponseOrder>> orderListResponse =
+//                restTemplate.exchange(orderUrl, HttpMethod.GET, null,
+//                                            new ParameterizedTypeReference<List<ResponseOrder>>() {
+//                });
+//        List<ResponseOrder> ordersList = orderListResponse.getBody();
 
         /* Using a feign client */
         /* Feign exception handling */
@@ -112,7 +113,7 @@ public class UserServiceImpl implements UserService {
 //        }
 
         /* ErrorDecoder */
-//        List<ResponseOrder> ordersList = orderServiceClient.getOrders(userId);
+        List<ResponseOrder> ordersList = orderServiceClient.getOrders(userId);
 //        log.info("Before call orders microservice");
 //        CircuitBreaker circuitBreaker = circuitBreakerFactory.create("circuitbreaker");
 //        List<ResponseOrder> ordersList = circuitBreaker.run(() -> orderServiceClient.getOrders(userId),
@@ -132,11 +133,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto getUserDetailsByEmail(String email) {
         UserEntity userEntity = userRepository.findByEmail(email);
-
         if (userEntity == null)
             throw new UsernameNotFoundException(email);
 
-        UserDto userDto = new ModelMapper().map(userEntity, UserDto.class);
+        ModelMapper mapper = new ModelMapper();
+        mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+
+        UserDto userDto = mapper.map(userEntity, UserDto.class);
         return userDto;
     }
 }
